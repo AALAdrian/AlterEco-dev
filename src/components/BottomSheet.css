@@ -1,0 +1,30 @@
+/* src/components/BottomSheet.css */
+
+.bottom-sheet {
+  position: fixed;
+  bottom: -100%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 80%;
+  width: 80%;
+  background-color: #2c2c2c;
+  transition: bottom 0.3s ease-in-out;
+}
+
+
+.bottom-sheet.open {
+  bottom: 0;
+}
+
+.bottom-sheet-content {
+  padding: 16px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+.bottom-sheet-content .result {
+    min-width: 300px;
+    max-width: 600px;
+}

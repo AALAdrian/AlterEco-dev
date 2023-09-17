@@ -1,21 +1,28 @@
 {
-  "name": "altereco",
-  "version": "0.1.0",
+  "name": "com.eco.alter",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.0",
+    "cordova_script": "^1.1.0",
+    "framer-motion": "^10.16.4",
+    "html5-qrcode": "^2.3.8",
+    "navigation-controller": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "reco serve",
+    "build": "reco checkversion && react-scripts build && reco copy && cordova build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject",
+    "reactstart": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
@@ -33,6 +40,25 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "displayName": "AlterEco",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "ui-db.com , react.cordova: Apache Cordova Team and React.js",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^12.0.1",
+    "cordova-browser": "^7.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
     ]
   }
 }
